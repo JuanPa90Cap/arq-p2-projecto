@@ -27,22 +27,16 @@ let prevMemoryValue = 0;
 let prevDiskValue = 0;
 let prevRecepcionValue = 0;
 
+
 client.onMessageArrived = function (message) {
 	let destination = message.destinationName;
-	if (destination === "probar_1") {
+	if (destination === "julian/UCE") {
         let response = JSON.parse(message.payloadString);
         dataFormat = response;
         let dataCPU = dataFormat.CPU;
         let dataMemoria = dataFormat.Memoria;
         let dataDisco = dataFormat.Disco;
         let dataRecepcion = dataFormat.Recepcion;
-        
-        //info pc
-        document.getElementById("arquitecturaValue").innerText = response.Arquitectura;
-        document.getElementById("sistemaValue").innerText = response.Sistema;
-        document.getElementById("ramValue").innerText = response.Ram;
-        document.getElementById("procesadorValue").innerText = response.Procesador;
-        document.getElementById("almacenamientoValue").innerText = response.Almacenamiento;
 
         // Calcular la diferencia con respecto al valor anterior
         let diffCPU = dataCPU - prevCPUValue;
@@ -63,10 +57,11 @@ client.onMessageArrived = function (message) {
         document.getElementById("RecepcionValue").innerText = dataRecepcion;
 
         // Actualizar los porcentajes en la página
-        document.getElementById("cpuPercentage").innerHTML = getColoredPercentage(percentageCPU);
-        document.getElementById("memoryPercentage").innerHTML = getColoredPercentage(percentageMemory);
-        document.getElementById("diskPercentage").innerHTML = getColoredPercentage(percentageDisk);
-        document.getElementById("RecepcionPercentage").innerHTML = getColoredPercentage(percentageRecepcion);
+       /* document.getElementById("cpuPercentage").innerText = percentageCPU + "%";
+        document.getElementById("memoryPercentage").innerText = percentageMemory + "%";
+        document.getElementById("diskPercentage").innerText = percentageDisk + "%";
+        document.getElementById("RecepcionPercentage").innerText = percentageRecepcion + "%";*/
+
 
         // Actualizar los valores anteriores con los nuevos valores
         prevCPUValue = dataCPU;
@@ -75,9 +70,9 @@ client.onMessageArrived = function (message) {
         prevRecepcionValue = dataRecepcion;
 
         // Cargar datos CPU, Memoria y Almacenamiento en las gráficas
-        addData(myChartCPU, dataCPU);
+       /* addData(myChartCPU, dataCPU);
         addData2(myChartMemory, dataMemoria);
-        addData3(myChartDisk, dataDisco);
+        addData3(myChartDisk, dataDisco);*/
     }
 };
 
@@ -94,28 +89,19 @@ function calculatePercentage(diff, prevValue) {
         return "0";
     }
 }
-// Función para obtener el porcentaje coloreado
-function getColoredPercentage(percentage) {
-    if (parseFloat(percentage) > 0) {
-        return '<span style="color: green;">' + percentage + '%</span>';
-    } else if (parseFloat(percentage) < 0) {
-        return '<span style="color: red;">' + percentage + '%</span>';
-    } else {
-        return percentage + '%';
-    }
-}
 
 var options = {
 	timeout: 3,
 	onSuccess: function () {
 		console.log("mqtt connected");
 		// Connection succeeded; subscribe to our topic, you can add multile lines of these
-		client.subscribe("probar_1", { qos: 1 });
+		client.subscribe("julian/UCE", { qos: 1 });
 	},
 	onFailure: function (message) {
 		console.log("Connection failed: " + message.errorMessage);
 	},
 };
+
 
 
 function testMqtt(){
