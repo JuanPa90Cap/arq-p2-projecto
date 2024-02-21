@@ -34,8 +34,8 @@ client.onMessageArrived = function (message) {
 
         let response = JSON.parse(message.payloadString);
         dataFormat = response;
-        let dataID = dataFormat.id;
-    if(dataID == 1){
+        let dataMaquina = dataFormat.dataMaquina;
+    if(dataMaquina == 1){
 
         let dataCPU = dataFormat.CPU;
         let dataMemoria = dataFormat.Memoria;
@@ -57,7 +57,7 @@ client.onMessageArrived = function (message) {
         prevRecepcionValue = dataRecepcion;
 
         }
-            if(dataID == 2){
+            if(dataMaquina == 2){
 
                 let dataCPU2 = dataFormat.CPU;
                 let dataMemoria2 = dataFormat.Memoria;
@@ -79,7 +79,7 @@ client.onMessageArrived = function (message) {
                 prevRecepcionValue = dataRecepcion2;
             
         }
-            if(dataID == 3){
+            if(dataMaquina == 3){
                 
             let dataCPU3 = dataFormat.CPU;
             let dataMemoria3 = dataFormat.Memoria;
