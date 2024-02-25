@@ -99,7 +99,8 @@ client.onMessageArrived = function (message) {
             prevMemoryValue = dataMemoria3;
             prevDiskValue = dataDisco3;
             prevRecepcionValue = dataRecepcion3;
-        } else{
+        } 
+            if(dataMaquina == 4 ){
                 
             let dataCPU4 = dataFormat.CPU;
             let dataMemoria4 = dataFormat.Memoria;
