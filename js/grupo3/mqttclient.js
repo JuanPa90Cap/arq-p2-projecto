@@ -34,7 +34,7 @@ client.onMessageArrived = function (message) {
 
         let response = JSON.parse(message.payloadString);
         dataFormat = response;
-        let dataMaquina = dataFormat.dataMaquina;
+        let dataMaquina = dataFormat.Maquina;
     if(dataMaquina == 1){
 
         let dataCPU = dataFormat.CPU;

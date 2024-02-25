@@ -35,6 +35,7 @@
   <link id="pagestyle" href="../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
   <script type="text/javascript" src="../js/grupo3/mqttclient.js"></script>
+  <script type="text/javascript" src="../js/grupo3/DataBase.js"></script>
   <script>
     initMqtt();
   </script></head>
@@ -220,8 +221,11 @@
       </div>
     </nav>
     <!-- End Navbar -->
-    //Maquina1//
-    <div class="container-fluid py-4">
+    
+    <h4 style="color: white; font-size: 24px; font-weight: bold; text-align: center; margin-right: 50px;">Maquina1</h4>
+
+  
+    <div class="container-fluid py-1">
       <div class="row">
         <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
           <div class="card">
@@ -230,9 +234,7 @@
                 <div class="col-8">
                   <div class="numbers">
                     <p class="text-sm mb-0 text-uppercase font-weight-bold">CPU</p>
-                    <h5 class="font-weight-bolder">
-                      <h4 class="mb-0"><span id="cpuValue">0</span>%</h4>
-                    </h5>
+                    <h4 class="mb-0"><span id="cpuValue">0</span>%</h4>   
                   </div>
                 </div>
                 <div class="col-4 text-end">
@@ -251,9 +253,7 @@
                 <div class="col-8">
                   <div class="numbers">
                     <p class="text-sm mb-0 text-uppercase font-weight-bold">RAM</p>
-                    <h5 class="font-weight-bolder">
-                      <h4 class="mb-0"><span id="memoryValue">0</span>%</h4>
-                    </h5>
+                    <h4 class="mb-0"><span id="memoryValue">0</span>%</h4>
                   </div>
                 </div>
                 <div class="col-4 text-end">
@@ -272,8 +272,7 @@
                 <div class="col-8">
                   <div class="numbers">
                     <p class="text-sm mb-0 text-uppercase font-weight-bold">NET</p>
-                    <h4 class="mb-0"><span id="RecepcionValue">0</span></h4>
-                    </p>
+                    <h4 class="mb-1"><span id="RecepcionValue">0</span></h4>
                   </div>
                 </div>
                 <div class="col-4 text-end">
@@ -291,10 +290,8 @@
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
-                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Disk</p>
-                    <h5 class="font-weight-bolder">
-                      <h4 class="mb-0"><span id="diskValue">0</span>%</h4>
-                    </h5>
+                    <p class="text-sm mb-0 text-uppercase font-weight-bold">DISCO</p>
+                    <h4 class="mb-0"><span id="diskValue">0</span></h4>
                     </p>
                   </div>
                 </div>
@@ -309,8 +306,10 @@
         </div>
       </div>
 
-      //Maquina2//
-      <div class="container-fluid py-4">
+      
+      <h4 style="color: white; font-size: 24px; font-weight: bold; text-align: center; margin-right: 50px;">Maquina 2</h4>
+
+      <div class="container-fluid py-1">
         <div class="row">
           <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
             <div class="card">
@@ -319,9 +318,7 @@
                   <div class="col-8">
                     <div class="numbers">
                       <p class="text-sm mb-0 text-uppercase font-weight-bold">CPU</p>
-                      <h5 class="font-weight-bolder">
-                        <h4 class="mb-0"><span id="cpuValue2">0</span>%</h4>
-                      </h5>
+                      <h4 class="mb-0"><span id="cpuValue2">0</span>%</h4>
                     </div>
                   </div>
                   <div class="col-4 text-end">
@@ -340,10 +337,7 @@
                   <div class="col-8">
                     <div class="numbers">
                       <p class="text-sm mb-0 text-uppercase font-weight-bold">RAM</p>
-                      <h5 class="font-weight-bolder">
                         <h4 class="mb-0"><span id="memoryValue2">0</span>%</h4>
-                      </h5>
-                    
                     </div>
                   </div>
                   <div class="col-4 text-end">
@@ -381,11 +375,8 @@
                 <div class="row">
                   <div class="col-8">
                     <div class="numbers">
-                      <p class="text-sm mb-0 text-uppercase font-weight-bold">Disk</p>
-                      <h5 class="font-weight-bolder">
-                        <h4 class="mb-0"><span id="diskValue2">0</span>%</h4>
-                      </h5>
-                      </p>
+                      <p class="text-sm mb-0 text-uppercase font-weight-bold">DISCO</p>
+                      <h4 class=" mb-0"><span id="diskValue2">0</span></h4>
                     </div>
                   </div>
                   <div class="col-4 text-end">
@@ -400,8 +391,10 @@
         </div>
 
 
-      //Maquina3//
-      <div class="container-fluid py-4">
+     
+      <h4 style="color: grey; font-size: 24px; font-weight: bold; text-align: center; margin-right: 50px;">Maquina 3</h4>
+
+      <div class="container-fluid py-1">
         <div class="row">
           <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
             <div class="card">
@@ -410,9 +403,7 @@
                   <div class="col-8">
                     <div class="numbers">
                       <p class="text-sm mb-0 text-uppercase font-weight-bold">CPU</p>
-                      <h5 class="font-weight-bolder">
-                        <h4 class="mb-0"><span id="cpuValue3">0</span>%</h4>
-                      </h5>
+                      <h4 class="mb-0"><span id="cpuValue3">0</span>%</h4>
                     </div>
                   </div>
                   <div class="col-4 text-end">
@@ -431,9 +422,7 @@
                   <div class="col-8">
                     <div class="numbers">
                       <p class="text-sm mb-0 text-uppercase font-weight-bold">RAM</p>
-                      <h5 class="font-weight-bolder">
-                        <h4 class="mb-0"><span id="memoryValue3">0</span>%</h4>
-                      </h5>
+                       <h4 class="mb-0"><span id="memoryValue3">0</span>%</h4>
                     </div>
                   </div>
                   <div class="col-4 text-end">
@@ -471,10 +460,8 @@
                 <div class="row">
                   <div class="col-8">
                     <div class="numbers">
-                      <p class="text-sm mb-0 text-uppercase font-weight-bold">Disk</p>
-                      <h5 class="font-weight-bolder">
-                        <h4 class="mb-0"><span id="diskValue3">0</span>%</h4>
-                      </h5>
+                      <p class="text-sm mb-0 text-uppercase font-weight-bold">DISCO</p>
+                      <h4 class="mb-0"><span id="diskValue3">0</span></h4>
                       </p>
                     </div>
                   </div>
@@ -488,8 +475,10 @@
             </div>
           </div>
         </div>
-      //Maquina4//
-<div class="container-fluid py-4">
+      
+      <h4 style="color: grey; font-size: 24px; font-weight: bold; text-align: center; margin-right: 50px;">Maquina 4</h4>
+
+<div class="container-fluid py-1">
       <div class="row">
         <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
           <div class="card">
@@ -498,9 +487,7 @@
                 <div class="col-8">
                   <div class="numbers">
                     <p class="text-sm mb-0 text-uppercase font-weight-bold">CPU</p>
-                    <h5 class="font-weight-bolder">
-                      <h4 class="mb-0"><span id="cpuValue4">0</span>%</h4>
-                    </h5>
+                      <h4 class=" mb-0"><span id="cpuValue4">0</span>%</h4>
                   </div>
                 </div>
                 <div class="col-4 text-end">
@@ -519,9 +506,7 @@
                 <div class="col-8">
                   <div class="numbers">
                     <p class="text-sm mb-0 text-uppercase font-weight-bold">RAM</p>
-                    <h5 class="font-weight-bolder">
                       <h4 class="mb-0"><span id="memoryValue4">0</span>%</h4>
-                    </h5>
                   </div>
                 </div>
                 <div class="col-4 text-end">
@@ -541,7 +526,6 @@
                   <div class="numbers">
                     <p class="text-sm mb-0 text-uppercase font-weight-bold">NET</p>
                     <h4 class="mb-0"><span id="RecepcionValue4">0</span></h4>
-                    </p>
                   </div>
                 </div>
                 <div class="col-4 text-end">
@@ -559,10 +543,8 @@
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
-                    <p class="text-sm mb-0 text-uppercase font-weight-bold">Disk</p>
-                    <h5 class="font-weight-bolder">
-                      <h4 class="mb-0"><span id="diskValue4">0</span>%</h4>
-                    </h5>
+                    <p class="text-sm mb-0 text-uppercase font-weight-bold">DISCO</p>
+                      <h4 class="mb-0"><span id="diskValue4">0</span></h4>
                     </p>
                   </div>
                 </div>
@@ -576,7 +558,7 @@
           </div>
         </div>
       </div>
-      fin de la ultima maquina
+      
 
 
       <div class="row mt-4">
@@ -643,146 +625,39 @@
           </div>
         </div>
       </div>
+      Base de datos
       <div class="row mt-4">
-        <div class="col-lg-7 mb-lg-0 mb-4">
-          <div class="card ">
+        <div class="col-lg-12 mb-lg-0 mb-4">
+          <div class="card">
             <div class="card-header pb-0 p-3">
               <div class="d-flex justify-content-between">
-                <h6 class="mb-2">Sales by Country</h6>
+                <h6 class="mb-2">Base de datos</h6>
               </div>
             </div>
-            <div class="table-responsive">
-              <table class="table align-items-center ">
+            <div class="table-responsive"> <!-- Agregada la clase table-responsive -->
+              <table class="table align-items-center" id="maquinasTable">
+                <thead>
+                  <tr>
+                    <th>MAQUINA</th>
+                    <th>ID</th>
+                    <th>CPU</th>
+                    <th>MEMORIA</th>
+                    <th>DISCO</th>
+                    <th>RECEPCION</th>
+                    <th>inserDT</th>
+                  </tr>
+                </thead>
                 <tbody>
-                  <tr>
-                    <td class="w-30">
-                      <div class="d-flex px-2 py-1 align-items-center">
-                        <div>
-                          <img src="../assets/img/icons/flags/US.png" alt="Country flag">
-                        </div>
-                        <div class="ms-4">
-                          <p class="text-xs font-weight-bold mb-0">Country:</p>
-                          <h6 class="text-sm mb-0">United States</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                        <h6 class="text-sm mb-0">2500</h6>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">Value:</p>
-                        <h6 class="text-sm mb-0">$230,900</h6>
-                      </div>
-                    </td>
-                    <td class="align-middle text-sm">
-                      <div class="col text-center">
-                        <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                        <h6 class="text-sm mb-0">29.9%</h6>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="w-30">
-                      <div class="d-flex px-2 py-1 align-items-center">
-                        <div>
-                          <img src="../assets/img/icons/flags/DE.png" alt="Country flag">
-                        </div>
-                        <div class="ms-4">
-                          <p class="text-xs font-weight-bold mb-0">Country:</p>
-                          <h6 class="text-sm mb-0">Germany</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                        <h6 class="text-sm mb-0">3.900</h6>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">Value:</p>
-                        <h6 class="text-sm mb-0">$440,000</h6>
-                      </div>
-                    </td>
-                    <td class="align-middle text-sm">
-                      <div class="col text-center">
-                        <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                        <h6 class="text-sm mb-0">40.22%</h6>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="w-30">
-                      <div class="d-flex px-2 py-1 align-items-center">
-                        <div>
-                          <img src="../assets/img/icons/flags/GB.png" alt="Country flag">
-                        </div>
-                        <div class="ms-4">
-                          <p class="text-xs font-weight-bold mb-0">Country:</p>
-                          <h6 class="text-sm mb-0">Great Britain</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                        <h6 class="text-sm mb-0">1.400</h6>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">Value:</p>
-                        <h6 class="text-sm mb-0">$190,700</h6>
-                      </div>
-                    </td>
-                    <td class="align-middle text-sm">
-                      <div class="col text-center">
-                        <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                        <h6 class="text-sm mb-0">23.44%</h6>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="w-30">
-                      <div class="d-flex px-2 py-1 align-items-center">
-                        <div>
-                          <img src="../assets/img/icons/flags/BR.png" alt="Country flag">
-                        </div>
-                        <div class="ms-4">
-                          <p class="text-xs font-weight-bold mb-0">Country:</p>
-                          <h6 class="text-sm mb-0">Brasil</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                        <h6 class="text-sm mb-0">562</h6>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">Value:</p>
-                        <h6 class="text-sm mb-0">$143,960</h6>
-                      </div>
-                    </td>
-                    <td class="align-middle text-sm">
-                      <div class="col text-center">
-                        <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                        <h6 class="text-sm mb-0">32.14%</h6>
-                      </div>
-                    </td>
-                  </tr>
+                  <!-- Los datos se llenarán aquí -->
                 </tbody>
               </table>
             </div>
           </div>
         </div>
+      </div>
+      
+      
+        fin de database
         <div class="col-lg-5">
           <div class="card">
             <div class="card-header pb-0 p-3">
