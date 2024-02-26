@@ -20,9 +20,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+
   <title>
     Grupo 3
   </title>
+  
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
   <!-- Nucleo Icons -->
@@ -34,6 +36,7 @@
   <!-- CSS Files -->
   <link id="pagestyle" href="../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+  <!--Js-->
   <script type="text/javascript" src="../js/grupo3/mqttclient.js"></script>
   <script type="text/javascript" src="../js/grupo3/DataBase.js"></script>
   <script>
@@ -221,25 +224,31 @@
       </div>
     </nav>
     <!-- End Navbar -->
-    
-    <h4 style="color: white; font-size: 24px; font-weight: bold; text-align: center; margin-right: 50px;">Maquina1</h4>
+    <div class="container-fluid py-3"></div>
 
+    <div class="container-fluid py-1 bg-gray-100 rounded-top">
+       <h4 style="color:black; font-size: 24px; font-weight: bold; margin-right:50px">Máquina 1</h4>
+       
+    </div>
+   
   
-    <div class="container-fluid py-1">
+    <div class="container-fluid py-1v bg-gray-100">
+      
       <div class="row">
         <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
           <div class="card">
-            <div class="card-body p-3">
+            <div class="card-body p-3"style= "border:2px solid black;border-radius: 10px">
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
-                    <p class="text-sm mb-0 text-uppercase font-weight-bold">CPU</p>
-                    <h4 class="mb-0"><span id="cpuValue">0</span>%</h4>   
+                    <p class="text-lg mb-0 text-uppercase font-weight-bolder"style="color: black">CPU</p>
+                    <h4 class="mb-0"style="color:black"><span id="cpuValue">0</span>%</h4>   
                   </div>
                 </div>
                 <div class="col-4 text-end">
-                  <div class="icon icon-shape bg-gradient-primary shadow-primary text-center rounded-circle">
-                    <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
+                  <div class="icon icon-shape bg-gradient-dark shadow-primary text-center rounded-circle">
+                    <i class="ni  ni-tv-2 opacity-10" aria-hidden="true"></i>
+                    
                   </div>
                 </div>
               </div>
@@ -248,36 +257,36 @@
         </div>
         <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
           <div class="card">
-            <div class="card-body p-3">
+            <div class="card-body p-3"style= "border:2px solid black;border-radius: 10px">
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
-                    <p class="text-sm mb-0 text-uppercase font-weight-bold">RAM</p>
-                    <h4 class="mb-0"><span id="memoryValue">0</span>%</h4>
+                    <p class="text-lg mb-0 text-uppercase font-weight-bolder"style="color:black">RAM</p>
+                    <h4 class="mb-0"style="color:black"><span id="memoryValue">0</span>%</h4>
                   </div>
                 </div>
                 <div class="col-4 text-end">
-                  <div class="icon icon-shape bg-gradient-danger shadow-danger text-center rounded-circle">
+                  <div class="icon icon-shape bg-gradient-dark shadow-danger text-center rounded-circle">
+                    <i class="ni ni-bulb-61 text-lg opacity-10" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div class="card">
+            <div class="card-body p-3"style= "border:2px solid black;border-radius: 10px">
+              <div class="row">
+                <div class="col-8">
+                  <div class="numbers">
+                    <p class="text-lg mb-0 text-uppercase font-weight-bolder"style="color:black">NET</p>
+                    <h4 class="mb-0"style="color:black"><span id="RecepcionValue">0</span></h4>
+                  </div>
+                </div>
+                <div class="col-4 text-end">
+                  <div class="icon icon-shape bg-gradient-dark shadow-success text-center rounded-circle">
                     <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-          <div class="card">
-            <div class="card-body p-3">
-              <div class="row">
-                <div class="col-8">
-                  <div class="numbers">
-                    <p class="text-sm mb-0 text-uppercase font-weight-bold">NET</p>
-                    <h4 class="mb-1"><span id="RecepcionValue">0</span></h4>
-                  </div>
-                </div>
-                <div class="col-4 text-end">
-                  <div class="icon icon-shape bg-gradient-success shadow-success text-center rounded-circle">
-                    <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
                   </div>
                 </div>
               </div>
@@ -286,18 +295,18 @@
         </div>
         <div class="col-xl-3 col-sm-6">
           <div class="card">
-            <div class="card-body p-3">
+            <div class="card-body p-3"style= "border:2px solid black;border-radius: 10px">
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
-                    <p class="text-sm mb-0 text-uppercase font-weight-bold">DISCO</p>
-                    <h4 class="mb-0"><span id="diskValue">0</span></h4>
-                    </p>
+                    <p class="text-lg mb-0 text-uppercase font-weight-bold"style="color:black">DISCO</p>
+                    <h4 class="mb-0"style="color:black"><span id="diskValue">0</span></h4>
+                    
                   </div>
                 </div>
                 <div class="col-4 text-end">
-                  <div class="icon icon-shape bg-gradient-warning shadow-warning text-center rounded-circle">
-                    <i class="ni ni-cart text-lg opacity-10" aria-hidden="true"></i>
+                  <div class="icon icon-shape bg-gradient-dark shadow-warning text-center rounded-circle">
+                    <i class="ni ni-box-2 text-lg opacity-10" aria-hidden="true"></i>
                   </div>
                 </div>
               </div>
@@ -305,260 +314,310 @@
           </div>
         </div>
       </div>
+   </div>
 
+      <div class="container-fluid py-1 bg-gray-100">
+       <h4 style="color:black; font-size: 24px; font-weight: bold; margin-right: 50px;">Máquina 2</h4>
+     </div>
+     <div class="container-fluid py-1v bg-gray-100">
       
-      <h4 style="color: white; font-size: 24px; font-weight: bold; text-align: center; margin-right: 50px;">Maquina 2</h4>
-
-      <div class="container-fluid py-1">
-        <div class="row">
-          <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-            <div class="card">
-              <div class="card-body p-3">
-                <div class="row">
-                  <div class="col-8">
-                    <div class="numbers">
-                      <p class="text-sm mb-0 text-uppercase font-weight-bold">CPU</p>
-                      <h4 class="mb-0"><span id="cpuValue2">0</span>%</h4>
-                    </div>
-                  </div>
-                  <div class="col-4 text-end">
-                    <div class="icon icon-shape bg-gradient-primary shadow-primary text-center rounded-circle">
-                      <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
-                    </div>
+      <div class="row">
+        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div class="card">
+            <div class="card-body p-3"style= "border:2px solid black;border-radius: 10px">
+              <div class="row">
+                <div class="col-8">
+                  <div class="numbers">
+                    <p class="text-lg mb-0 text-uppercase font-weight-bolder"style="color: black">CPU</p>
+                    <h4 class="mb-0"style="color:black"><span id="cpuValue2">0</span>%</h4>   
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-            <div class="card">
-              <div class="card-body p-3">
-                <div class="row">
-                  <div class="col-8">
-                    <div class="numbers">
-                      <p class="text-sm mb-0 text-uppercase font-weight-bold">RAM</p>
-                        <h4 class="mb-0"><span id="memoryValue2">0</span>%</h4>
-                    </div>
-                  </div>
-                  <div class="col-4 text-end">
-                    <div class="icon icon-shape bg-gradient-danger shadow-danger text-center rounded-circle">
-                      <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-            <div class="card">
-              <div class="card-body p-3">
-                <div class="row">
-                  <div class="col-8">
-                    <div class="numbers">
-                      <p class="text-sm mb-0 text-uppercase font-weight-bold">NET</p>
-                      <h4 class="mb-0"><span id="RecepcionValue2">0</span></h4>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-4 text-end">
-                    <div class="icon icon-shape bg-gradient-success shadow-success text-center rounded-circle">
-                      <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-sm-6">
-            <div class="card">
-              <div class="card-body p-3">
-                <div class="row">
-                  <div class="col-8">
-                    <div class="numbers">
-                      <p class="text-sm mb-0 text-uppercase font-weight-bold">DISCO</p>
-                      <h4 class=" mb-0"><span id="diskValue2">0</span></h4>
-                    </div>
-                  </div>
-                  <div class="col-4 text-end">
-                    <div class="icon icon-shape bg-gradient-warning shadow-warning text-center rounded-circle">
-                      <i class="ni ni-cart text-lg opacity-10" aria-hidden="true"></i>
-                    </div>
+                <div class="col-4 text-end">
+                  <div class="icon icon-shape bg-gradient-dark shadow-primary text-center rounded-circle">
+                    <i class="ni  ni-tv-2 opacity-10" aria-hidden="true"></i>
+                    
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div class="card">
+            <div class="card-body p-3"style= "border:2px solid black;border-radius: 10px">
+              <div class="row">
+                <div class="col-8">
+                  <div class="numbers">
+                    <p class="text-lg mb-0 text-uppercase font-weight-bolder"style="color:black">RAM</p>
+                    <h4 class="mb-0"style="color:black"><span id="memoryValue2">0</span>%</h4>
+                  </div>
+                </div>
+                <div class="col-4 text-end">
+                  <div class="icon icon-shape bg-gradient-dark shadow-danger text-center rounded-circle">
+                    <i class="ni ni-bulb-61 text-lg opacity-10" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div class="card">
+            <div class="card-body p-3"style= "border:2px solid black;border-radius: 10px">
+              <div class="row">
+                <div class="col-8">
+                  <div class="numbers">
+                    <p class="text-lg mb-0 text-uppercase font-weight-bolder"style="color:black">NET</p>
+                    <h4 class="mb-0"style="color:black"><span id="RecepcionValue2">0</span></h4>
+                  </div>
+                </div>
+                <div class="col-4 text-end">
+                  <div class="icon icon-shape bg-gradient-dark shadow-success text-center rounded-circle">
+                    <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6">
+          <div class="card">
+            <div class="card-body p-3"style= "border:2px solid black;border-radius: 10px">
+              <div class="row">
+                <div class="col-8">
+                  <div class="numbers">
+                    <p class="text-lg mb-0 text-uppercase font-weight-bold"style="color:black">DISCO</p>
+                    <h4 class="mb-0"style="color:black"><span id="diskValue2">0</span></h4>
+                    
+                  </div>
+                </div>
+                <div class="col-4 text-end">
+                  <div class="icon icon-shape bg-gradient-dark shadow-warning text-center rounded-circle">
+                    <i class="ni ni-box-2 text-lg opacity-10" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
 
+     <div class="container-fluid py-1 bg-gray-100">
+      <h4 style="color:black ; font-size: 24px; font-weight: bold; margin-right: 50px;">Máquina 3</h4>
+   </div>
 
+   <div class="container-fluid py-1v bg-gray-100">
+      
+    <div class="row">
+      <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+        <div class="card">
+          <div class="card-body p-3"style= "border:2px solid black;border-radius: 10px">
+            <div class="row">
+              <div class="col-8">
+                <div class="numbers">
+                  <p class="text-lg mb-0 text-uppercase font-weight-bolder"style="color: black">CPU</p>
+                  <h4 class="mb-0"style="color:black"><span id="cpuValue3">0</span>%</h4>   
+                </div>
+              </div>
+              <div class="col-4 text-end">
+                <div class="icon icon-shape bg-gradient-dark shadow-primary text-center rounded-circle">
+                  <i class="ni  ni-tv-2 opacity-10" aria-hidden="true"></i>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+        <div class="card">
+          <div class="card-body p-3"style= "border:2px solid black;border-radius: 10px">
+            <div class="row">
+              <div class="col-8">
+                <div class="numbers">
+                  <p class="text-lg mb-0 text-uppercase font-weight-bolder"style="color:black">RAM</p>
+                  <h4 class="mb-0"style="color:black"><span id="memoryValue3">0</span>%</h4>
+                </div>
+              </div>
+              <div class="col-4 text-end">
+                <div class="icon icon-shape bg-gradient-dark shadow-danger text-center rounded-circle">
+                  <i class="ni ni-bulb-61 text-lg opacity-10" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+        <div class="card">
+          <div class="card-body p-3"style= "border:2px solid black;border-radius: 10px">
+            <div class="row">
+              <div class="col-8">
+                <div class="numbers">
+                  <p class="text-lg mb-0 text-uppercase font-weight-bolder"style="color:black">NET</p>
+                  <h4 class="mb-0"style="color:black"><span id="RecepcionValue3">0</span></h4>
+                </div>
+              </div>
+              <div class="col-4 text-end">
+                <div class="icon icon-shape bg-gradient-dark shadow-success text-center rounded-circle">
+                  <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-sm-6">
+        <div class="card">
+          <div class="card-body p-3"style= "border:2px solid black;border-radius: 10px">
+            <div class="row">
+              <div class="col-8">
+                <div class="numbers">
+                  <p class="text-lg mb-0 text-uppercase font-weight-bold"style="color:black">DISCO</p>
+                  <h4 class="mb-0"style="color:black"><span id="diskValue3">0</span></h4>
+                  
+                </div>
+              </div>
+              <div class="col-4 text-end">
+                <div class="icon icon-shape bg-gradient-dark shadow-warning text-center rounded-circle">
+                  <i class="ni ni-box-2 text-lg opacity-10" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ </div>
+
+     <div class="container-fluid py-1 bg-gray-100">
+      <h4 style="color:black; font-weight: bold; margin-right: 50px;">Máquina 4</h4>
+   </div>
      
-      <h4 style="color: grey; font-size: 24px; font-weight: bold; text-align: center; margin-right: 50px;">Maquina 3</h4>
-
-      <div class="container-fluid py-1">
-        <div class="row">
-          <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-            <div class="card">
-              <div class="card-body p-3">
-                <div class="row">
-                  <div class="col-8">
-                    <div class="numbers">
-                      <p class="text-sm mb-0 text-uppercase font-weight-bold">CPU</p>
-                      <h4 class="mb-0"><span id="cpuValue3">0</span>%</h4>
-                    </div>
-                  </div>
-                  <div class="col-4 text-end">
-                    <div class="icon icon-shape bg-gradient-primary shadow-primary text-center rounded-circle">
-                      <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-            <div class="card">
-              <div class="card-body p-3">
-                <div class="row">
-                  <div class="col-8">
-                    <div class="numbers">
-                      <p class="text-sm mb-0 text-uppercase font-weight-bold">RAM</p>
-                       <h4 class="mb-0"><span id="memoryValue3">0</span>%</h4>
-                    </div>
-                  </div>
-                  <div class="col-4 text-end">
-                    <div class="icon icon-shape bg-gradient-danger shadow-danger text-center rounded-circle">
-                      <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-            <div class="card">
-              <div class="card-body p-3">
-                <div class="row">
-                  <div class="col-8">
-                    <div class="numbers">
-                      <p class="text-sm mb-0 text-uppercase font-weight-bold">NET</p>
-                      <h4 class="mb-0"><span id="RecepcionValue3">0</span></h4>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-4 text-end">
-                    <div class="icon icon-shape bg-gradient-success shadow-success text-center rounded-circle">
-                      <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-sm-6">
-            <div class="card">
-              <div class="card-body p-3">
-                <div class="row">
-                  <div class="col-8">
-                    <div class="numbers">
-                      <p class="text-sm mb-0 text-uppercase font-weight-bold">DISCO</p>
-                      <h4 class="mb-0"><span id="diskValue3">0</span></h4>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-4 text-end">
-                    <div class="icon icon-shape bg-gradient-warning shadow-warning text-center rounded-circle">
-                      <i class="ni ni-cart text-lg opacity-10" aria-hidden="true"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+   <div class="container-fluid py-1v bg-gray-100">
       
-      <h4 style="color: grey; font-size: 24px; font-weight: bold; text-align: center; margin-right: 50px;">Maquina 4</h4>
-
-<div class="container-fluid py-1">
-      <div class="row">
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-          <div class="card">
-            <div class="card-body p-3">
-              <div class="row">
-                <div class="col-8">
-                  <div class="numbers">
-                    <p class="text-sm mb-0 text-uppercase font-weight-bold">CPU</p>
-                      <h4 class=" mb-0"><span id="cpuValue4">0</span>%</h4>
-                  </div>
-                </div>
-                <div class="col-4 text-end">
-                  <div class="icon icon-shape bg-gradient-primary shadow-primary text-center rounded-circle">
-                    <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
-                  </div>
+    <div class="row">
+      <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+        <div class="card">
+          <div class="card-body p-3"style= "border:2px solid black;border-radius: 10px">
+            <div class="row">
+              <div class="col-8">
+                <div class="numbers">
+                  <p class="text-lg mb-0 text-uppercase font-weight-bolder"style="color: black">CPU</p>
+                  <h4 class="mb-0"style="color:black"><span id="cpuValue4">0</span>%</h4>   
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-          <div class="card">
-            <div class="card-body p-3">
-              <div class="row">
-                <div class="col-8">
-                  <div class="numbers">
-                    <p class="text-sm mb-0 text-uppercase font-weight-bold">RAM</p>
-                      <h4 class="mb-0"><span id="memoryValue4">0</span>%</h4>
-                  </div>
-                </div>
-                <div class="col-4 text-end">
-                  <div class="icon icon-shape bg-gradient-danger shadow-danger text-center rounded-circle">
-                    <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-          <div class="card">
-            <div class="card-body p-3">
-              <div class="row">
-                <div class="col-8">
-                  <div class="numbers">
-                    <p class="text-sm mb-0 text-uppercase font-weight-bold">NET</p>
-                    <h4 class="mb-0"><span id="RecepcionValue4">0</span></h4>
-                  </div>
-                </div>
-                <div class="col-4 text-end">
-                  <div class="icon icon-shape bg-gradient-success shadow-success text-center rounded-circle">
-                    <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6">
-          <div class="card">
-            <div class="card-body p-3">
-              <div class="row">
-                <div class="col-8">
-                  <div class="numbers">
-                    <p class="text-sm mb-0 text-uppercase font-weight-bold">DISCO</p>
-                      <h4 class="mb-0"><span id="diskValue4">0</span></h4>
-                    </p>
-                  </div>
-                </div>
-                <div class="col-4 text-end">
-                  <div class="icon icon-shape bg-gradient-warning shadow-warning text-center rounded-circle">
-                    <i class="ni ni-cart text-lg opacity-10" aria-hidden="true"></i>
-                  </div>
+              <div class="col-4 text-end">
+                <div class="icon icon-shape bg-gradient-dark shadow-primary text-center rounded-circle">
+                  <i class="ni  ni-tv-2 opacity-10" aria-hidden="true"></i>
+                  
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
+      <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+        <div class="card">
+          <div class="card-body p-3"style= "border:2px solid black;border-radius: 10px">
+            <div class="row">
+              <div class="col-8">
+                <div class="numbers">
+                  <p class="text-lg mb-0 text-uppercase font-weight-bolder"style="color:black">RAM</p>
+                  <h4 class="mb-0"style="color:black"><span id="memoryValue4">0</span>%</h4>
+                </div>
+              </div>
+              <div class="col-4 text-end">
+                <div class="icon icon-shape bg-gradient-dark shadow-danger text-center rounded-circle">
+                  <i class="ni ni-bulb-61 text-lg opacity-10" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+        <div class="card">
+          <div class="card-body p-3"style= "border:2px solid black;border-radius: 10px">
+            <div class="row">
+              <div class="col-8">
+                <div class="numbers">
+                  <p class="text-lg mb-0 text-uppercase font-weight-bolder"style="color:black">NET</p>
+                  <h4 class="mb-0"style="color:black"><span id="RecepcionValue4">0</span></h4>
+                </div>
+              </div>
+              <div class="col-4 text-end">
+                <div class="icon icon-shape bg-gradient-dark shadow-success text-center rounded-circle">
+                  <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-sm-6">
+        <div class="card">
+          <div class="card-body p-3"style= "border:2px solid black;border-radius: 10px">
+            <div class="row">
+              <div class="col-8">
+                <div class="numbers">
+                  <p class="text-lg mb-0 text-uppercase font-weight-bold"style="color:black">DISCO</p>
+                  <h4 class="mb-0"style="color:black"><span id="diskValue4">0</span></h4>
+                  
+                </div>
+              </div>
+              <div class="col-4 text-end">
+                <div class="icon icon-shape bg-gradient-dark shadow-warning text-center rounded-circle">
+                  <i class="ni ni-box-2 text-lg opacity-10" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ </div>
+
+<!--Base de Datos--> 
+
+<div class="container-fluid py-2  rounded-top">
+  <div class="container-fluid py-3" ><h1></h1></div>
+  <div class="container-fluid py-1" ><h4 style="color:black">Base de datos</h4>
+  
+   <div class="row mt-4">
+    <div class="col-lg-12 mb-lg-0 mb-4">
+      <div class="card"style= "border:2px solid black;border-radius: 10px">
+        <div class="card-header pb-0 p-3">
+          <div class="d-flex justify-content-between">
+            
+          </div>
+        </div>
+        <div class="table-responsive"> <!-- Agregada la clase table-responsive -->
+          <table class="table align-items-center" id="maquinasTable">
+            <thead>
+              <tr>
+                <th style="color:black">MAQUINA</th>
+                <th style="color:black">ID</th>
+                <th style="color:black">CPU</th>
+                <th style="color:black">MEMORIA</th>
+                <th style="color:black">DISCO</th>
+                <th style="color:black">RECEPCION</th>
+                <th style="color:black">inserDT</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Los datos se llenarán aquí -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+  <!--fin de la base de datos-->
+  
+    
 
 
       <div class="row mt-4">
@@ -625,40 +684,8 @@
           </div>
         </div>
       </div>
-      Base de datos
-      <div class="row mt-4">
-        <div class="col-lg-12 mb-lg-0 mb-4">
-          <div class="card">
-            <div class="card-header pb-0 p-3">
-              <div class="d-flex justify-content-between">
-                <h6 class="mb-2">Base de datos</h6>
-              </div>
-            </div>
-            <div class="table-responsive"> <!-- Agregada la clase table-responsive -->
-              <table class="table align-items-center" id="maquinasTable">
-                <thead>
-                  <tr>
-                    <th>MAQUINA</th>
-                    <th>ID</th>
-                    <th>CPU</th>
-                    <th>MEMORIA</th>
-                    <th>DISCO</th>
-                    <th>RECEPCION</th>
-                    <th>inserDT</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <!-- Los datos se llenarán aquí -->
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      
-        fin de database
-        <div class="col-lg-5">
+
+             <div class="col-lg-5">
           <div class="card">
             <div class="card-header pb-0 p-3">
               <h6 class="mb-0">Categories</h6>
