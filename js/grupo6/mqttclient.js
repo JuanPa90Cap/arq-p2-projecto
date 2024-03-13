@@ -29,88 +29,57 @@ let prevRecepcionValue = 0;
 
 client.onMessageArrived = function (message) {
 	let destination = message.destinationName;
-	if (destination === "probar_1") {
+	if (destination === "grupo6") {
         let response = JSON.parse(message.payloadString);
         dataFormat = response;
-        let dataCPU = dataFormat.CPU;
-        let dataMemoria = dataFormat.Memoria;
-        let dataDisco = dataFormat.Disco;
-        let dataRecepcion = dataFormat.Recepcion;
+        let pc = dataFormat.id;
+
+    if(pc == 1){  
+        let dataCPU = dataFormat.cpu;
+        let dataMemoria = dataFormat.memory;
+        let dataDisco = dataFormat.disk;
+        let dataRecepcion = dataFormat.net;
         
-        //info pc
-        document.getElementById("arquitecturaValue").innerText = response.Arquitectura;
-        document.getElementById("sistemaValue").innerText = response.Sistema;
-        document.getElementById("ramValue").innerText = response.Ram;
-        document.getElementById("procesadorValue").innerText = response.Procesador;
-        document.getElementById("almacenamientoValue").innerText = response.Almacenamiento;
-
-        // Calcular la diferencia con respecto al valor anterior
-        let diffCPU = dataCPU - prevCPUValue;
-        let diffMemory = dataMemoria - prevMemoryValue;
-        let diffDisk = dataDisco - prevDiskValue;
-        let diffRecepcion = dataRecepcion - prevRecepcionValue;
-
-        // Calcular el porcentaje de cambio
-        let percentageCPU = calculatePercentage(diffCPU, prevCPUValue);
-        let percentageMemory = calculatePercentage(diffMemory, prevMemoryValue);
-        let percentageDisk = calculatePercentage(diffDisk, prevDiskValue);
-        let percentageRecepcion = calculatePercentage(diffRecepcion, prevRecepcionValue);
-
         // Actualizar los valores en tiempo real en la página
         document.getElementById("cpuValue").innerText = dataCPU;
         document.getElementById("memoryValue").innerText = dataMemoria;
         document.getElementById("diskValue").innerText = dataDisco;
         document.getElementById("RecepcionValue").innerText = dataRecepcion;
-
-        // Actualizar los porcentajes en la página
-        document.getElementById("cpuPercentage").innerHTML = getColoredPercentage(percentageCPU);
-        document.getElementById("memoryPercentage").innerHTML = getColoredPercentage(percentageMemory);
-        document.getElementById("diskPercentage").innerHTML = getColoredPercentage(percentageDisk);
-        document.getElementById("RecepcionPercentage").innerHTML = getColoredPercentage(percentageRecepcion);
-
         // Actualizar los valores anteriores con los nuevos valores
         prevCPUValue = dataCPU;
         prevMemoryValue = dataMemoria;
         prevDiskValue = dataDisco;
         prevRecepcionValue = dataRecepcion;
 
-        // Cargar datos CPU, Memoria y Almacenamiento en las gráficas
-        addData(myChartCPU, dataCPU);
-        addData2(myChartMemory, dataMemoria);
-        addData3(myChartDisk, dataDisco);
+    
+        }
+
+    if(pc ==2){  
+        let dataCPU2 = dataFormat.cpu;
+        let dataMemoria2 = dataFormat.memory;
+        let dataDisco2 = dataFormat.disk;
+        let dataRecepcion2 = dataFormat.net;
+        
+        // Actualizar los valores en tiempo real en la página
+        document.getElementById("cpuValue2").innerText = dataCPU2;
+        document.getElementById("memoryValue2").innerText = dataMemoria2;
+        document.getElementById("diskValue2").innerText = dataDisco2;
+        document.getElementById("RecepcionValue2").innerText = dataRecepcion2;
+        // Actualizar los valores anteriores con los nuevos valores
+        prevCPUValue = dataCPU2;
+        prevMemoryValue = dataMemoria2;
+        prevDiskValue = dataDisco2;
+        prevRecepcionValue = dataRecepcion2;
+        }
     }
 };
-
-// Función para calcular el porcentaje de cambio
-function calculatePercentage(diff, prevValue) {
-    if (prevValue === 0) {
-        return "0"; // Si el valor anterior es cero, el porcentaje de cambio es cero
-    }
-
-    let percentage = ((diff / prevValue) * 100).toFixed(2);
-    if (isFinite(percentage)) {
-        return percentage >= 0 ? "+" + percentage : percentage;
-    } else {
-        return "0";
-    }
-}
-// Función para obtener el porcentaje coloreado
-function getColoredPercentage(percentage) {
-    if (parseFloat(percentage) > 0) {
-        return '<span style="color: green;">' + percentage + '%</span>';
-    } else if (parseFloat(percentage) < 0) {
-        return '<span style="color: red;">' + percentage + '%</span>';
-    } else {
-        return percentage + '%';
-    }
-}
 
 var options = {
 	timeout: 3,
 	onSuccess: function () {
 		console.log("mqtt connected");
 		// Connection succeeded; subscribe to our topic, you can add multile lines of these
-		client.subscribe("probar_1", { qos: 1 });
+		client.subscribe("grupo6", { qos: 1 });
 	},
 	onFailure: function (message) {
 		console.log("Connection failed: " + message.errorMessage);
